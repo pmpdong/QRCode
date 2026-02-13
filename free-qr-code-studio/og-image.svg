@@ -1,0 +1,45 @@
+
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#1E1B4B"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#312E81"/>
+      <stop offset="1" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="20" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#paint0_linear)"/>
+  
+  <!-- Abstract QR Pattern Background -->
+  <g opacity="0.1">
+    <rect x="800" y="-100" width="100" height="100" fill="white"/>
+    <rect x="900" y="0" width="100" height="100" fill="white"/>
+    <rect x="1000" y="100" width="100" height="100" fill="white"/>
+    <rect x="1100" y="200" width="100" height="100" fill="white"/>
+    <rect x="700" y="100" width="100" height="100" fill="white"/>
+    <rect x="600" y="200" width="100" height="100" fill="white"/>
+  </g>
+
+  <!-- Logo and Icon -->
+  <g filter="url(#glow)">
+    <rect x="100" y="215" width="200" height="200" rx="40" fill="#4F46E5"/>
+    <path d="M150 265H180V295H150V265Z" fill="white"/>
+    <path d="M220 265H250V295H220V265Z" fill="white"/>
+    <path d="M150 335H180V365H150V335Z" fill="white"/>
+    <path d="M220 335H235V350H220V335Z" fill="white"/>
+    <path d="M235 350H250V365H235V350Z" fill="white"/>
+    <path d="M190 265H210V285H190V265Z" fill="white" opacity="0.5"/>
+    <path d="M190 345H210V365H190V345Z" fill="white" opacity="0.5"/>
+  </g>
+
+  <!-- Text -->
+  <text fill="white" style="white-space: pre" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="800" letter-spacing="-0.02em"><tspan x="360" y="300">FREE QR Code</tspan><tspan x="360" y="380">Studio</tspan></text>
+  <text fill="#A5B4FC" style="white-space: pre" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="500" letter-spacing="0.1em"><tspan x="360" y="440">POWERED BY GEMINI AI</tspan></text>
+  
+  <!-- Accents -->
+  <circle cx="1100" cy="530" r="100" stroke="#4F46E5" stroke-width="2" opacity="0.3"/>
+  <circle cx="1100" cy="530" r="150" stroke="#4F46E5" stroke-width="1" opacity="0.2"/>
+</svg>

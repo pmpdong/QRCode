@@ -1,0 +1,7 @@
+{
+  "name": "FREE QR Code Studio",
+  "description": "A sophisticated QR code generator featuring AI-driven style suggestions, custom branding, and real-time design previews.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
