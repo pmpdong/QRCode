@@ -462,30 +462,12 @@ const App: React.FC = () => {
                 </span>
               </div>
               <div className="p-4 flex flex-col items-center justify-center min-h-[250px] relative">
-                <div className="w-full h-full border border-dashed border-slate-200 rounded-xl bg-slate-50 flex flex-col items-center justify-center text-center p-6 gap-3">
-                  <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-300">
-                    <Maximize size={24} />
-                  </div>
-                  <div>
-                    <script async
-                            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3723159796278677"
-                            crossOrigin="anonymous"></script>
-                    <ins className="adsbygoogle"
-                         style={{display: 'block'}}
-                         data-ad-client="ca-pub-3723159796278677"
-                         data-ad-slot="8047777604"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                      (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-
-                  </div>
-                  <button
-                      className="text-[11px] font-bold text-indigo-500 flex items-center gap-1 hover:text-indigo-600 transition-colors">
-                    Learn more <ExternalLink size={10}/>
-                  </button>
-                </div>
+                <ins className="adsbygoogle"
+                     style={{display: 'block'}}
+                     data-ad-client="ca-pub-3723159796278677"
+                     data-ad-slot="8047777604"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
               </div>
             </div>
 
