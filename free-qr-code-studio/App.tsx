@@ -1,14 +1,14 @@
 
 import React, { useState, useRef, useCallback } from 'react';
 import { QRCodeCanvas, QRCodeSVG } from 'qrcode.react';
-import { 
-  QrCode, 
-  Download, 
-  Sparkles, 
-  Link, 
-  Type as TextIcon, 
-  Mail, 
-  Wifi, 
+import {
+  QrCode,
+  Download,
+  Sparkles,
+  Link,
+  Type as TextIcon,
+  Mail,
+  Wifi,
   UserCircle,
   Settings2,
   Palette,
@@ -37,13 +37,13 @@ const App: React.FC = () => {
     bottomText: '',
     imageSettings: undefined
   });
-  
+
   const [aiPrompt, setAiPrompt] = useState('');
   const [aiSuggestions, setAiSuggestions] = useState<AISuggestion[]>([]);
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [aiError, setAiError] = useState<string | null>(null);
   const [iconSize, setIconSize] = useState(20);
-  
+
   const qrRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -390,14 +390,14 @@ const App: React.FC = () => {
 
       <main className="flex-grow p-4 md:p-8 lg:p-12 flex flex-col items-center justify-center relative bg-slate-50 overflow-y-auto">
         <div className="max-w-4xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          
+
           <div className="flex flex-col items-center gap-6 md:gap-8 sticky top-4 md:top-8">
-            <div 
+            <div
               className="p-6 md:p-10 bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-2xl shadow-indigo-100/50 border border-slate-100 flex flex-col items-center justify-center transition-all duration-500 hover:scale-[1.01] w-full max-w-sm md:max-w-none mx-auto"
               style={{ backgroundColor: config.bgColor }}
             >
               <div ref={qrRef} className="flex items-center justify-center w-full aspect-square relative overflow-hidden">
-                <QRCodeCanvas 
+                <QRCodeCanvas
                   value={config.value}
                   size={config.size}
                   fgColor={config.fgColor}
@@ -410,10 +410,10 @@ const App: React.FC = () => {
                 />
               </div>
               {config.bottomText && (
-                <div 
-                  className="mt-4 font-bold text-center w-full truncate leading-tight flex items-center justify-center px-4" 
-                  style={{ 
-                    color: config.fgColor, 
+                <div
+                  className="mt-4 font-bold text-center w-full truncate leading-tight flex items-center justify-center px-4"
+                  style={{
+                    color: config.fgColor,
                     fontSize: `clamp(14px, 4vw, ${Math.max(14, config.size / 14)}px)`,
                   }}
                 >
@@ -423,7 +423,7 @@ const App: React.FC = () => {
             </div>
 
             <div ref={svgRef} className="hidden">
-              <QRCodeSVG 
+              <QRCodeSVG
                 value={config.value}
                 size={config.size}
                 fgColor={config.fgColor}
@@ -435,14 +435,14 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 w-full justify-center">
-              <button 
+              <button
                 onClick={handleDownload}
                 className="flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200 active:scale-95 text-sm md:text-base"
               >
                 <Download size={20} />
                 Download PNG
               </button>
-              <button 
+              <button
                 onClick={handleSvgDownload}
                 className="flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-white text-slate-700 border border-slate-200 rounded-2xl font-bold hover:bg-slate-50 transition-all active:scale-95 hover:border-indigo-300 hover:text-indigo-600 text-sm md:text-base"
               >
@@ -467,11 +467,23 @@ const App: React.FC = () => {
                     <Maximize size={24} />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-slate-600">Dynamic Google Ad Unit</h4>
-                    <p className="text-xs text-slate-400 max-w-[200px] mt-1">This slot is optimized for high-performance AdSense display content.</p>
+                    <script async
+                            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3723159796278677"
+                            crossOrigin="anonymous"></script>
+                    <ins className="adsbygoogle"
+                         style={{display: 'block'}}
+                         data-ad-client="ca-pub-3723159796278677"
+                         data-ad-slot="8047777604"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+
                   </div>
-                  <button className="text-[11px] font-bold text-indigo-500 flex items-center gap-1 hover:text-indigo-600 transition-colors">
-                    Learn more <ExternalLink size={10} />
+                  <button
+                      className="text-[11px] font-bold text-indigo-500 flex items-center gap-1 hover:text-indigo-600 transition-colors">
+                    Learn more <ExternalLink size={10}/>
                   </button>
                 </div>
               </div>
@@ -482,7 +494,7 @@ const App: React.FC = () => {
                 <Settings2 size={24} />
                 <h2 className="font-bold text-xl">Technical Props</h2>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                   <div>
@@ -491,7 +503,7 @@ const App: React.FC = () => {
                   </div>
                   <div className="flex gap-1 p-1 bg-slate-100 rounded-xl self-start md:self-auto">
                     {['L', 'M', 'Q', 'H'].map(lvl => (
-                      <button 
+                      <button
                         key={lvl}
                         onClick={() => setConfig(prev => ({ ...prev, level: lvl as any }))}
                         className={`px-3 md:px-4 py-1.5 md:py-2 rounded-lg transition-all text-sm font-black ${config.level === lvl ? 'bg-white shadow-sm text-indigo-600' : 'text-slate-400 hover:text-slate-600'}`}
@@ -504,7 +516,7 @@ const App: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-bold text-slate-700">Export Resolution</span>
-                  <select 
+                  <select
                     value={config.size}
                     onChange={(e) => setConfig(prev => ({ ...prev, size: Number(e.target.value) }))}
                     className="bg-slate-100 border-0 rounded-xl px-4 py-2 text-sm font-bold focus:ring-0 outline-none appearance-none cursor-pointer"
